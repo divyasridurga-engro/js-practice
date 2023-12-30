@@ -114,3 +114,31 @@ and also we have assigned default values as 0 so that it wont break when there a
 
 
 ------------spread operators---------------
+- spread operator is used to expand an array,
+- it extracts all the values from an array individually and appends it to the respective array.
+syntax- (...)
+ex-
+let array=[1,2,3,4];
+let newArray=[...array, 5,6,7];
+output- [1,2,3,4,5,6,7];
+ex-
+let array=[1,2,3,4,5];
+console.log(...array);
+op- 1,2,3,4,5                // it extracts values individually from an array
+
+use cases of spread operator-
+-to make a copy of an array
+ex-
+let array=['divya', 'sri', 'durga'];
+let copyArray=[...array];
+-to merge or join 2 arrays
+let array1=[1,2,3,4];
+let array2=[5,6,7,8];
+let mergedArrays=[...array1, ...array2];
+
+iterables- arrays, strings, maps, steps
+non-iterable- objects
+
+** we can iterate objects as well in spread operator **
+
+
