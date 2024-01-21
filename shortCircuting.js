@@ -32,7 +32,11 @@ console.log(null && 'divyaa' && 2) // prints null, since it is the first falsy v
 let petName=null;
 petName= petName ?? 'divyaa' // prints the static value given only when the value is null or undefined
 
-console.log('petName',petName)
+console.log('petName',petName);
+
+let array=null;
+// console.log(array ?? ['undefined'])
+console.log(null ?? undefined ?? '')
 
 
 
