@@ -63,3 +63,47 @@ console.log(inputEmail.toLowerCase().replace(/ /g,''));
 // includes() check whether the letter or word is included in a string, if yes it returns true else false
 // startsWith() check whether the word starts with given letter or word, if yes it returns true else false
 // endsWith() check whether the word ends with given letter or word, if yes it returns true else false
+
+
+//  split method
+// split method splits string with the divider string and returns an array
+let str='Divy-asri-durga';
+console.log(str.split('-')[1])  // [ 'Divy', 'asri', 'durga' ]
+str= 'Divyasridurga';
+console.log(str.split('-')?.[1] ||'')  // [ 'Divyasridurga' ] str.split('-')[1] - undefined
+// incase if doesnt find any divider string to split it returns string in an array;
+
+
+// join method
+// join method joins the string with the divider string 
+// join prototype is used on arrays which returns string
+let j=['divya', 'sri', 'durga'];
+console.log(j.join(' '));
+
+// concat method - it is used to concat 2 arrays or strings
+// we can also add a divider strings which is added between all the concatenated strings
+
+let cs='divya';
+let cs2='sri';
+let cs3='durga';
+
+console.log(cs.concat(cs2, cs3))  // divyasridurga
+// if i want to specify divider string or delimeter
+console.log(cs.concat('-', cs2,'-', cs3));
+
+// convert all the first letters to uppercase in a string
+
+function convertUpper(name){
+    let namesplit= name.split(' ');
+    let arr=[]
+    for(let n of namesplit){
+        // arr.push(n[0].toUpperCase()+ n.slice(1));
+        //another method of converting the first letter to uppercase
+        arr.push(n.replace(n[0], n[0].toUpperCase()))
+    }
+   let finalName= arr.join(' ')
+    console.log(finalName)
+}
+convertUpper('divya sri durga')
+convertUpper('engro technologies')
+
