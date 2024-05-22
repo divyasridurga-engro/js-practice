@@ -107,3 +107,26 @@ function convertUpper(name){
 convertUpper('divya sri durga')
 convertUpper('engro technologies')
 
+// convert strings with snake case to camel case 
+
+let xy=`Engro_technologies
+     Divya_sri_durga
+     Associate_Development_Engineer
+     Divya_Sri_Durga
+     Associate_Development_engineer
+     Divya_sri_durga
+     Associate_Development_Engineer
+     Divya_Sri_Durga
+     Associate_Development_engineer`;
+let z=xy.split('\n');
+for(var i in z){
+let a=z[i].trim().toLowerCase().split('_');
+let [one,...two]=a;
+let arr=[]
+for(var s of two){
+    arr.push(s.replace(s[0], s[0].toUpperCase()))
+}
+arr.unshift(one);
+console.log(arr.join('').padEnd(30)+ `${'🧠'.repeat(+i+1)}`);
+}
+
